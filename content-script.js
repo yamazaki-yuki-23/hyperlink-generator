@@ -20,4 +20,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     copyToClipboard(htmlLink, plainText);
     sendResponse({ status: "success" });
   }
+
+  if (request.action === "checkStatus") {
+    sendResponse({ status: "active" });
+  }
 });
