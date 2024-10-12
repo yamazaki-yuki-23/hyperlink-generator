@@ -1,13 +1,13 @@
 {
-    "manifest_version": 3,
-    "name": "Slack Rich Text Link Generator",
-    "version": "1.0",
-    "description": "Generate rich text links for Slack from selected text.",
-    "permissions": ["activeTab", "contextMenus", "clipboardWrite"],
-    "background": {
-        "service_worker": "background.js"
-    },
-    "action": {
-        "default_popup": "popup.html"
-    }
+  "manifest_version": 3,
+  "name": "Slack Rich Text Link Generator",
+  "version": "1.0",
+  "description": "Generate rich text links for Slack from selected text.",
+  "permissions": ["activeTab", "contextMenus", "clipboardWrite"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
 }
