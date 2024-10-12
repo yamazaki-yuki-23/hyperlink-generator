@@ -13,7 +13,10 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     const pageUrl = tab.url;
     const pageTitle = tab.title;
 
-    const slackRichLink = `<${pageUrl}|${selectedText || pageTitle}>`;
+    const slackRichLink = {
+      text: selectedText || pageTitle,
+      url: pageUrl
+    };
 
     chrome.scripting.executeScript({
       target: {tabId: tab.id},
