@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Slack Rich Text Link Generator",
+  "name": "Hyperlink Generator",
   "version": "1.0",
-  "description": "Generate rich text links for Slack from selected text.",
+  "description": "Generate hyperlinks from selected text.",
   "permissions": ["activeTab", "contextMenus", "clipboardWrite", "scripting"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "service-worker.js"
   },
   "action": {
     "default_popup": "popup.html"

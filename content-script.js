@@ -5,17 +5,17 @@ function copyToClipboard(html, text) {
       "text/plain": new Blob([text || html], { type: "text/plain" })
     })
   ]).then(() => {
-    console.log("リンクがクリップボードにコピーされました！");
+    console.log("Link successfully copied to clipboard!");
   }).catch(err => {
-    console.error("コピーに失敗しました。", err);
+    console.error("Failed to copy to clipboard.", err);
   });
 }
 
 // メッセージをリスンして、クリップボードにコピーする
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((request, _, sendResponse) => {
   if (request.action === "copyToClipboard") {
-    const htmlLink = `<a href="${request.slackRichLink.url}">${request.slackRichLink.text}</a>`;
-    const plainText = `${request.slackRichLink.text} (${request.slackRichLink.url})`;
+    const htmlLink = `<a href="${request.hyperLink.url}">${request.hyperLink.text}</a>`;
+    const plainText = `${request.hyperLink.text} (${request.hyperLink.url})`;
 
     copyToClipboard(htmlLink, plainText);
     sendResponse({ status: "success" });
