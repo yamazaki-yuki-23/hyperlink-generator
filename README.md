@@ -2,6 +2,8 @@
 
 A simple Chrome extension that allows you to generate hyperlinks from selected text and copy them to the clipboard.
 
+[Get it on Chrome Web Store](https://chromewebstore.google.com/detail/hyperlink-generator/iglbpaahcocnbekjagmbajlchammcplm)
+
 ## Features
 
 - Create a hyperlink from selected text on any webpage.
